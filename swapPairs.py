@@ -5,6 +5,7 @@ class ListNode:
         self.next = None
 
 class Solution:
+    # 递归调用函数，将问题拆解为相同的小规模子问题
     def swapPairs(self,head):
         if head is None or head.next is None:
             return head
@@ -18,13 +19,13 @@ if __name__ == "__main__":
     s = [1,2,3,4]
 
     head = ListNode(None)
-    tmp = head
+    cur = head
     for i in s:
         newNode = ListNode(i)
-        tmp.next = newNode
-        tmp = newNode
-    head = head.next
-
+        cur.next = newNode
+        cur = cur.next
+    head = head.next        
+        
     so = Solution()
     result = so.swapPairs(head)
     tmp = result
