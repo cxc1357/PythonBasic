@@ -6,10 +6,13 @@ class ListNode:
 
 class Solution:
     def swapPairs(self,head):
+        # 递归终止条件
         if head is None or head.next is None:
             return head
         tmp = head.next
+        # 下探到下一层，返回表头
         r = self.swapPairs(tmp.next)
+        # 清理当前层
         tmp.next = head
         head.next = r
         return tmp
