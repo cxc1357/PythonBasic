@@ -23,5 +23,3 @@ if __name__ == "__main__":
     # binaryTree = listToBinarytree([1,2,3,4,5,6,7])
     res = so.lowestCommonAncestor(binaryTree,binaryTree.left,binaryTree.right)
     print(res.val)
-
-
